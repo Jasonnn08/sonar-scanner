@@ -1,24 +1,37 @@
-This Arduino project is a sonar scanner that uses a servo motor and an ultrasonic sensor (HC-SR04) to detect objects and measure distances in a wide area, as well as displaying the object it scans with a red dot.
+# 🛸 Arduino Sonar Scanner
 
-How it works:
-- The servo motor rotates from left to right (e.g., 0° to 180°)
+This Arduino project is coded in **C++**, is a **sonar scanner** that uses a **servo motor** and an **ultrasonic sensor (HC-SR04)** to detect objects, measure distances across an arc, and display the scanned object as a **red dot** on a radar-style screen using Processing.
 
-- At each angle, the ultrasonic sensor measures the distance to the nearest object.
+## 🔧 How It Works
 
-- The distances are then either:
-    - Sent to the Serial Monitor for viewing, or
-    - Mapped out for a simple radar-style display (if connected to Processing or another visual tool).
- 
-Hardware Used:
-- Arduino Uno (or compatible)
+- The **servo motor** rotates from 0° to 180°, scanning the area in front of it.
+- At each angle, the **ultrasonic sensor** measures the **distance** to the nearest object.
+- The measured distance is:
+  - Sent to the **Serial Monitor**, and
+  - Visualized as a **red dot** on a radar-style display using Processing.
 
+This simulates how real sonar systems scan an area to detect obstacles.
+
+## 🧰 Hardware Used
+
+- Arduino Uno (or compatible board)
 - SG90 Servo Motor
-
 - HC-SR04 Ultrasonic Sensor
-
-- Jumper wires
-
 - Breadboard or sensor mount
+- Jumper wires
+- USB cable for programming
 
-Notes:
-- You can use Processing to visualize the data like a radar screen
+## 📁 Files Included
+
+- `sonar_scanner.ino` – Arduino sketch to control the servo and sensor
+
+## 🖥️ Software Requirements
+
+- [Arduino IDE](https://www.arduino.cc/en/software)
+- [Processing IDE](https://processing.org/download/) *(for radar display)*
+
+## 💡 Notes
+
+- Make sure the **HC-SR04** sensor is securely mounted and aligned straight.
+- You can customize the servo range and scanning speed in the code.
+- The Processing sketch reads serial data and plots dots based on angle and distance.
