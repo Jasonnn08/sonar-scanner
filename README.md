@@ -21,10 +21,6 @@ This simulates how real sonar systems scan an area to detect obstacles.
 - Jumper wires
 - USB cable for programming
 
-## 📁 Files Included
-
-- `sonar_scanner.ino` – Arduino sketch to control the servo and sensor
-
 ## 🖥️ Software Requirements
 
 - [Arduino IDE](https://www.arduino.cc/en/software)
